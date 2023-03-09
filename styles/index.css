@@ -23,11 +23,20 @@ nav ul{
     font-size: 0.8em;
     font-weight: bold;
     align-items: center;
+    position: relative;
 }
 nav ul li:hover {
     cursor: pointer;
     color: rgb(211, 0, 211);
 }
+/* nav li:hover::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background: purple;
+    transform: translateY(-13px);
+} */
 #language {
     border: 1px black;
     border-radius: 20px;
@@ -65,9 +74,11 @@ header div button {
 .icon-part {
     background-color: rgb(31, 31, 31);
     color: white;
-    padding: 5rem 10rem;
+    padding: 5rem 0;
 }
 .icon-part-container {
+    width: 70%;
+    margin: auto;
    display: flex;
    justify-content: space-between;
    align-items: center;
@@ -122,6 +133,8 @@ h3 {
 }
 .main-news-container div p{
     margin-bottom: 2em;
+    font-size: 0.8em;
+    font-weight: bolder;
 }
 .link {
     position: absolute;
@@ -134,4 +147,85 @@ h3 {
     font-weight: bolder;
     font-size: 0.8em;
 }
+.contact-container {
+    width: 70%;
+    margin: 5rem  auto;
+}
+.contact-list {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20%;
+    align-items: start;
+    text-align: left;
+    justify-content: space-around;
+    position: relative;
+}
+.contact-list::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: rgb(235,235,235);
+    bottom: -40px;
+}
+.infos-p{
+    padding: 0;
+}
+.list {
+    font-weight: bold;
+}
+.list p {
+    font-size: 0.7em;
+    line-height: 2;
+}
+.list ul {
+    font-size: 0.8em;
+    color: purple;
+    line-height: 2.5;
+    
+}
+.list ul li a{
+    text-decoration: none;
+    font-size: 0.9em;
+}
+.list a {
+    text-decoration: none;
+}
+h5{
+    font-size: 1em;
+    text-transform: uppercase;
 
+}
+.network {
+    margin-bottom: 0;
+}
+.footer-logos i{
+    margin-right: 10px;
+}
+
+.contact-medias {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5rem;
+    position: relative;
+}
+.medias-text p{
+    font-weight: bolder;
+}
+.medias-logos span{
+    margin: 1rem;
+}
+footer{
+    background-color: rgb(31, 31, 31);
+   text-align: center;
+   padding: 0.8rem;
+}
+footer h3 {
+    color: white;
+}
+footer ul {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: auto;
+}
